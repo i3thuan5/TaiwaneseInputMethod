@@ -119,3 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# 使用者上傳檔案
+MEDIA_ROOT = os.path.join(BASE_DIR, "上傳的錄音檔")
+MEDIA_URL = '/錄音檔/'
