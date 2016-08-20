@@ -1,0 +1,20 @@
+{% extends "框.html" %}
+
+{% block 內容 %}
+	{% if 語料 %}
+	    <table>
+	    {% for 文 in 語料 %}
+	    	<tr>
+	    	<td>{{ 文.pk }}</td>
+	    	<td>{{ 文.收錄時間|date:"Y-m-d" }}</td>
+	    	<td>{{ 文 }}</td>
+	    	<td>
+	        	<a href="{% url '看' 文.id %}">看錄音檔</a>
+	        </td>
+	        </tr>
+	    {% endfor %}
+	    </ul>
+	{% else %}
+	    <p>這馬無文章。</p>
+	{% endif %}
+{% endblock %}

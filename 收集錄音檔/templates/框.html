@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+    <title>{% block 標題 %}臺語語音轉文字輸入法{% endblock %}</title>
+    {% block extrahead %}{% endblock %}
+    {% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static '文章/版面.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static '文章/內容.css' %}" />
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+    <div id="sidebar"> {% block sidebar %}{% endblock %} </div>
+
+    <div id="container">
+
+        <div id="menu">
+            {% block nav-global %}
+				<span>
+				  臺語語音轉文字輸入法 | 
+				  <a href="{% url '首頁' %}">轉頭頁</a> |
+				  <a href="{% url '加' %}">加錄音檔</a>
+				</span>
+            {% endblock %}
+        </div>
+	<br/>
+        <!-- CONTENT -->
+
+        <div id="內容">
+            {% block 內容 %}{% endblock %}
+        </div>
+    </div>
+
+</body>
+</html>

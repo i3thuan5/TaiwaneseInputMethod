@@ -1,0 +1,8 @@
+{% if 資料.errors %}
+	{{ 資料.errors }}
+{% endif %}
+{{ 資料.label_tag }}
+{% if 資料.help_text %}
+	（{{ 資料.help_text }}）
+{% endif %}
+{{ 資料 }}

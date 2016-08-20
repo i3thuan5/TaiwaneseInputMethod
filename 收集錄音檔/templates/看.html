@@ -1,0 +1,19 @@
+{% extends "框.html" %}
+
+{% block 內容 %}
+	<table class="資料">
+		<tr>
+			<td>
+        	   	{% include "一格資料.html" with 資料=表格.漢字 %}
+   			</td>
+			<td>
+        	   	{% include "一格資料.html" with 資料=表格.臺羅 %}
+   			</td>
+		</tr>
+		<tr><td colspan='2'
+    	   	{% include "一格資料.html" with 資料=表格.音檔 %}<br/>
+    	   	{% include "一格資料.html" with 資料=表格.備註 %}<br/>
+ 		</td></tr>
+	</table>
+	<a href={% url '改' '1' %}>改資料</a>
+{% endblock %}
